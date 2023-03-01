@@ -9,13 +9,13 @@ inputs:
   bearer_token:
     description: "Bearer token used for authentication"
   debug:
-    description: "Debug flag"
+    description: "Debug flag (useful when something fails)"
   deployments:
     description: "Comma separated list of deployment names (e.g. deployment1,deployment2)"
   disable_output:
     description: "Disables outputting to stdout (useful if the logs are public, but you don't want to expose anything)"
   ignore_tls_errors:
-    description: "Accept self-signed SSL certificates"
+    description: "Accept self-signed SSL certificate"
   namespace:
     description: "Kubernetes namespace of the deployment to be updated"
 name: Kubernetes redeploy workload
