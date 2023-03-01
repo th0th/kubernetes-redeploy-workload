@@ -21,13 +21,13 @@ Deploy kubernetes workloads using kubernetes API.
 
 | Variable          | Required | Default value | Description                                                                                          |
 |-------------------|:--------:|---------------|------------------------------------------------------------------------------------------------------|
-| base_url          |    ✔     |               | Kubernetes API base url                                                                              |
-| bearer_token      |    ✔     |               | Bearer token used for authentication                                                                 |
+| base_url          |    ✓     |               | Kubernetes API base url                                                                              |
+| bearer_token      |    ✓     |               | Bearer token used for authentication                                                                 |
 | debug             |          | 'false'       | Debug flag (useful when something fails)                                                             |
-| deployments       |    ✔     |               | Comma separated list of deployment names (e.g. deployment1,deployment2)                              |
+| deployments       |    ✓     |               | Comma separated list of deployment names (e.g. deployment1,deployment2)                              |
 | disable_output    |          | 'false'       | Disables outputting to stdout (useful if the logs are public, but you don't want to expose anything) |
 | ignore_tls_errors |          | 'false'       | Accept self-signed SSL certificate                                                                   |
-| namespace         |    ✔     |               | Kubernetes namespace of the deployment to be updated                                                 |
+| namespace         |    ✓     |               | Kubernetes namespace of the deployment to be updated                                                 |
 
 ### Running as a docker container
 
