@@ -28,5 +28,5 @@ runs:
     DISABLE_OUTPUT: ${{ inputs.disable_output }}
     IGNORE_TLS_ERRORS: ${{ inputs.ignore_tls_errors }}
     NAMESPACE: ${{ inputs.namespace }}
-  image: docker://ghcr.io/th0th/kubernetes-redeploy-workload/kubernetes-redeploy-workload:0.1.0
+  image: docker://ghcr.io/th0th/kubernetes-redeploy-workload:0.1.0
   using: docker
