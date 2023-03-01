@@ -1,0 +1,32 @@
+author: "Gokhan Sari"
+branding:
+  icon: truck
+  color: blue
+description: "Redeploy kubernetes workload using kubernetes API"
+inputs:
+  base_url:
+    description: "Kubernetes API base url"
+  bearer_token:
+    description: "Bearer token used for authentication"
+  debug:
+    description: "Debug flag"
+  deployments:
+    description: "Comma separated list of deployment names (e.g. deployment1,deployment2)"
+  disable_output:
+    description: "Disables outputting to stdout (useful if the logs are public, but you don't want to expose anything)"
+  ignore_tls_errors:
+    description: "Accept self-signed SSL certificates"
+  namespace:
+    description: "Kubernetes namespace of the deployment to be updated"
+name: Kubernetes redeploy workload
+runs:
+  env:
+    BASE_URL: ${{ inputs.base_url }}
+    BEARER_TOKEN: ${{ inputs.bearer_token }}
+    DEBUG: ${{ inputs.debug }}
+    DEPLOYMENTS: ${{ inputs.deployments }}
+    DISABLE_OUTPUT: ${{ inputs.disable_output }}
+    IGNORE_TLS_ERRORS: ${{ inputs.ignore_tls_errors }}
+    NAMESPACE: ${{ inputs.namespace }}
+  image: docker://ghcr.io/th0th/kubernetes-redeploy-workload/kubernetes-redeploy-workload:0.1.0
+  using: docker
