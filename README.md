@@ -8,10 +8,10 @@ Deploy kubernetes workloads using kubernetes API.
   - name: Update kubernetes deployments
     uses: th0th/kubernetes-redeploy-workload@v0.1.0
     with:
-      base_url: "https://rancher.aperturescience.tld"
+      base_url: "https://kubernetes.princesscarolyn.com"
       bearer_token: "${{ secrets.BEARER_TOKEN }}"
-      debug: "false"
-      deployments: "wheatley1,wheatley2"
+      debug: "true"
+      deployments: "deployment1,deployment2"
       disable_output: "false"
       ignore_tls_errors: "false"
       namespace: "namespace"
@@ -36,9 +36,9 @@ $ docker run --rm -it \
     -e BASE_URL="https://kubernetes.princesscarolyn.com" \
     -e BEARER_TOKEN="bXRwWkNJNklEoyYVdObFlXTmpiM1Z1ZEM5el" \
     -e DEBUG="false" \
-    -e DEPLOYMENTS="wheatley1,wheatley2" \
-    -e DISABLE_OUTPUT="true" \
-    -e IGNORE_TLS_ERRORS="true" \
+    -e DEPLOYMENTS="deployment1,deployment2" \
+    -e DISABLE_OUTPUT="false" \
+    -e IGNORE_TLS_ERRORS="false" \
     -e NAMESPACE="namespace" \
     ghcr.io/th0th/kubernetes-redeploy-workload:0.1.0
 ```
