@@ -136,6 +136,8 @@ func main() {
 		} else {
 			fmt.Println("There were errors, to see them you can set DEBUG environment variable as 'true'.")
 		}
+
+		os.Exit(1)
 	}
 }
 
